@@ -1,4 +1,4 @@
-package za.co.dubedivine.groceryapp
+package za.co.dubedivine.groceryapp.activity.main
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import za.co.dubedivine.groceryapp.R
 
 class MainActivity : AppCompatActivity() {
 

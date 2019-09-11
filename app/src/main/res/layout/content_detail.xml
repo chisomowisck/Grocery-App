@@ -6,14 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:showIn="@layout/activity_main"
-        tools:context=".activity.main.MainActivity">
-
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_grocery_items"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-    </androidx.recyclerview.widget.RecyclerView>
+        tools:showIn="@layout/activity_detail"
+        tools:context=".activity.detail.DetailActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
