@@ -1,5 +1,6 @@
 package za.co.dubedivine.groceryapp.data.remote
 
+import retrofit2.Call
 import retrofit2.http.*
 import za.co.dubedivine.groceryapp.model.GroceryItem
 import za.co.dubedivine.groceryapp.model.responseModel.StatusResponseEntity
@@ -7,14 +8,14 @@ import za.co.dubedivine.groceryapp.model.responseModel.StatusResponseEntity
 interface GroceryService {
 
     @GET("groceries")
-    suspend fun getGroceriesList(): MutableIterable<GroceryItem>
+    fun getGroceriesList(): Call<List<GroceryItem>>
 
     @PUT("groceries")
-    suspend fun addGroceryItem(@Body groceryItem: GroceryItem): StatusResponseEntity<GroceryItem>
+    fun addGroceryItem(@Body groceryItem: GroceryItem): Call<StatusResponseEntity<GroceryItem>>
 
     @DELETE("groceries/{id}")
-    suspend fun deleteGroceryItem(@Path("id") id: Long): StatusResponseEntity<Boolean>
+    fun deleteGroceryItem(@Path("id") id: Long): Call<StatusResponseEntity<Boolean>>
 
     @POST("groceries/available")
-    suspend fun toggleGroceryItemAvailability(@Body availability: Boolean, @Query("id") id: Long): StatusResponseEntity<Boolean>
+    fun toggleGroceryItemAvailability(@Body availability: Boolean, @Query("id") id: Long): Call<StatusResponseEntity<Boolean>>
 }

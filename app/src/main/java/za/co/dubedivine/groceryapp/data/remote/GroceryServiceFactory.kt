@@ -6,7 +6,9 @@ import okhttp3.OkHttpClient
 
 object GroceryServiceFactory {
 
-    private const val API_BASE_URL = "http://localhost:8080"
+    private const val API_BASE_URL = "http://10.72.78.124:8080/"
+
+    // add the logging interceptor
 
     fun makeservice(): GroceryService {
         val httpClient = OkHttpClient.Builder()
