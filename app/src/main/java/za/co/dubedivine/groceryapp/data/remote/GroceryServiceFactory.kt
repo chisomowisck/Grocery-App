@@ -10,7 +10,7 @@ object GroceryServiceFactory {
 
     // add the logging interceptor
 
-    fun makeservice(): GroceryService {
+    fun makeService(): GroceryService {
         val httpClient = OkHttpClient.Builder()
 
         val builder = Retrofit.Builder()

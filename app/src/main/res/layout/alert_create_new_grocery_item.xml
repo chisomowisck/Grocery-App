@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:orientation="vertical"
+              android:layout_margin="@dimen/fab_margin"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+
+    <!--<TextView android:layout_width="match_parent"-->
+              <!--android:text="Add A New Grocery Item"-->
+              <!--android:paddingTop="8dp"-->
+              <!--android:paddingBottom="8dp"-->
+              <!--android:textAppearance="@style/TextAppearance.AppCompat.Title"-->
+              <!--android:layout_height="wrap_content"/>-->
+
+    <EditText
+            android:hint="Enter Item name"
+            android:padding="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_grocery_item_name" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+    <CheckBox android:layout_width="match_parent"
+              android:padding="@dimen/default_margin"
+
+              android:id="@+id/checkbox_grocery_item_is_available"
+              android:text="Available"
+
+              android:layout_height="wrap_content"/>
+</LinearLayout>
